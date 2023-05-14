@@ -1,0 +1,61 @@
+The -fuzzcache flag is used with the go clean command to remove files stored in the Go build cache for fuzz testing. The fuzzing engine caches files that expand code coverage, so removing them may make fuzzing less effective until new inputs are found that provide the same coverage.
+
+
+go env:
+set GO111MODULE=
+set GOARCH=amd64
+set GOBIN=
+set GOCACHE=C:\Users\Admin\AppData\Local\go-build
+set GOENV=C:\Users\Admin\AppData\Roaming\go\env
+set GOEXE=.exe
+set GOEXPERIMENT=
+set GOFLAGS=
+set GOHOSTARCH=amd64
+set GOHOSTOS=windows
+set GOINSECURE=
+set GOMODCACHE=C:\Users\Admin\go\pkg\mod
+set GONOPROXY=
+set GONOSUMDB=
+set GOOS=windows
+set GOPATH=C:\Users\Admin\go
+set GOPRIVATE=
+set GOPROXY=https://proxy.golang.org,direct
+set GOROOT=C:\Program Files\Go
+set GOSUMDB=sum.golang.org
+set GOTMPDIR=
+set GOTOOLDIR=C:\Program Files\Go\pkg\tool\windows_amd64
+set GOAMD64=v1
+set AR=ar
+set CC=gcc
+set GOAMD64=v1
+set AR=ar
+set CC=gcc
+set CXX=g++
+set CGO_ENABLED=0
+set GOMOD=C:\Code\Learning\GoLang\godevdotcom\hello\go.mod
+set GOWORK=
+set CGO_CFLAGS=-O2 -g
+set CGO_CPPFLAGS=
+set CGO_CXXFLAGS=-O2 -g
+set CGO_FFLAGS=-O2 -g
+set CGO_LDFLAGS=-O2 -g
+set PKG_CONFIG=pkg-config
+set GOGCCFLAGS=-m64 -fno-caret-diagnostics -Qunused-arguments -Wl,--no-gc-sections -fmessage-length=0 -fdebug-prefix-map=C:\Users\Admin\AppData\Local\Temp\go-build119308506=/tmp/go-build -gno-record-gcc-switches     
+
+Here is a brief explanation of some of the variables:
+
+GO111MODULE: Determines whether Go uses the new module-based dependency management system.
+GOARCH: The architecture that Go is currently running on.
+GOBIN: The location where Go installs compiled binaries.
+GOCACHE: The location where Go stores cached build artifacts.
+GOENV: The location of the file that stores per-user configuration for Go.
+GOEXE: The file extension used for compiled binaries.
+GOFLAGS: Global flags that are passed to all invocations of the go command.
+GOHOSTARCH: The architecture of the host machine that Go is running on.
+GOHOSTOS: The operating system of the host machine that Go is running on.
+GOINSECURE: A list of patterns (separated by spaces) that match module paths for which Go should not require secure connections when downloading modules.
+GOMODCACHE: The location where Go stores downloaded modules and their dependencies.
+GOPATH: The location where Go stores source code, compiled binaries, and other files related to third-party packages.
+GOPROXY: A URL or a comma-separated list of URLs that specifies a module proxy for Go to use when downloading modules.
+GOROOT: The location where the Go toolchain is installed.
+GOSUMDB: The name of the checksum database that Go uses to verify module downloads. GOSUMDB is an environment variable that identifies the name of the checksum database that the Go command uses to authenticate every downloaded module. The Go command checks that the bits downloaded for a specific module version today match bits downloaded yesterday. This ensures repeatable builds and detects the introduction of unexpected changes, malicious or not
