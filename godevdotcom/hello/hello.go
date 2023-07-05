@@ -12,7 +12,7 @@ func main() {
 	log.SetPrefix("greetings: ")
 	log.SetFlags(0)
 	// Request a greeting message.
-	message, err := greetings.Hello("")
+	message, err := greetings.Hello("ravikanth")
 	// If an error was returned, printing it to the console and esit the program
 	if err != nil {
 		log.Fatal(err)
