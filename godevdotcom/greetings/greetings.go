@@ -1,8 +1,8 @@
 package greetings
 
 import (
-	"fmt"
 	"errors"
+	"fmt"
 	"math/rand"
 	"time"
 )
@@ -12,20 +12,22 @@ func init() {
 	fmt.Println("Current time: ", currentTime)
 	rand.Seed(currentTime)
 }
-//Hello returns a greeting for the named person.
+
+// Hello returns a greeting for the named person.
 func Hello(name string) (string, error) {
 	//If no name -> return error w/message
-	if name == ""{
+	if name == "" {
 		return "", errors.New("empty name")
 	}
 	//Create a message using a random format.
 	message := fmt.Sprintf(randomFormat(), name)
+	// message := fmt.Sprint(randomFormat())
 	return message, nil
 }
 
 //Hellos retuns a map that associates each of the named people with a greeting message.
 
-func Hellos (names []string) (map[string]string, error) {
+func Hellos(names []string) (map[string]string, error) {
 	//A map to associate names with messages.
 	messages := make(map[string]string)
 	//Loop through the received slice of names calling the Hello function to get a message for each name.
