@@ -23,4 +23,7 @@ func main() {
 	}
 	// If no error was returned, print the returned map of messages to the console
 	fmt.Println(messages)
+
+	//write code to print output on console in new line 
+	// fmt.Println("Hello, World!")
 }
