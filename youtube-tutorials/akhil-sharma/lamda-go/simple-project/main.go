@@ -21,4 +21,9 @@ func HandleLamdaEvent(event MyEvent) (MyResponse, error) {
 
 func main() {
 	lambda.Start(HandleLamdaEvent)	
+	// write code to print hello sarfaraz below 
+	fmt.Println("Hello Sarfaraz")
+	
+
+
 }
